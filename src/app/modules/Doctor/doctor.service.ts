@@ -48,7 +48,7 @@ const getAllFromDB = async (
   if (Object.keys(filterData).length > 0) {
     const filterConditions = Object.keys(filterData).map((key) => ({
       [key]: {
-        equal: (filterData as any)[key],
+        equals: (filterData as any)[key],
       },
     }));
     andConditions.push(...filterConditions);
